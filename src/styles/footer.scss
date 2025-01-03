@@ -1,0 +1,16 @@
+@use 'variables' as v;
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+
+    p {
+        margin: 10px;
+    }
+
+    img{
+        margin: 20px;
+    }
+}

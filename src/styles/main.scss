@@ -1,0 +1,43 @@
+@use '_variables.scss';
+@use '_global.scss';
+@use 'header.scss';
+@use 'footer.scss';
+
+.home{
+
+    position: relative;
+    width: 100%;
+
+    img{
+        max-height: 223px;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        box-shadow: 25%;
+        filter: brightness(60%);
+        border-radius: 25px;
+    }
+
+    h1{
+        position: absolute;
+        top: 50%; // Centre verticalement
+        left: 50%; // Centre horizontalement
+        transform: translate(-50%, -50%); // Ajustement précis du centrage
+        color: white; // Texte blanc pour contraster avec l'image
+    }
+
+}
+
+.about{
+    width: 100%;
+
+    img {
+        max-height: 223px;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        box-shadow: 25%;
+        filter: brightness(70%);
+        border-radius: 25px;
+    }
+}
