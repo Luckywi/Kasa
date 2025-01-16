@@ -1,0 +1,31 @@
+@use 'variables' as v;
+
+header {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-right: 5%;
+    padding-left: 5%;
+    background-color: white;
+
+    h1 {
+        color: v.$primary-color;
+    }
+
+    nav {
+        a {
+            font-size: 24px;
+            font-weight: 500;
+            text-decoration: none;
+            color: black;
+            margin: 20px;
+
+            &:hover {
+                text-decoration: underline;
+                color: black;
+            }
+        }
+    }
+}
