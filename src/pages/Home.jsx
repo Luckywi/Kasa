@@ -1,32 +1,27 @@
-import { Link } from 'react-router-dom';
 import {} from '../styles/main.scss';
 import home from '../assets/home.svg';
-import logements from '../data/logements.json'
+import logements from '../data/logements.json';
+import Banner from '../components/Banner';
+import Card from '../components/Card';
 
 
 function Home() {
     return (
-        <div className="home">
-            {/* Section bannière */}
-            <div className="home-banner">
-                <img src={home} alt="Image page d'accueil"/>
-                <h1>Chez vous, partout et ailleurs</h1>
-            </div>
+      <div className="home">
+        <Banner image={home} text="Chez vous, partout et ailleurs" />
 
-            {/* Section des cartes de logements */}
-            <div className='main-container'>
-                {logements.map((logement) => {
-                    return (
-                        <Link key={logement.id} to={`/logement/${logement.id}`} className='card'> 
-                            <img src={logement.cover} alt={'logement.title'} className="card-cover"></img>
-                            <h1>{logement.title}</h1>
-                        </Link>
-                    )
-                })}
-            </div>
+        <div className="main-container">
+          {logements.map((logement) => (
+            <Card
+              key={logement.id}
+              id={logement.id}
+              cover={logement.cover}
+              title={logement.title}
+            />
+          ))}
         </div>
+      </div>
     );
-}
-
-
+  }
+  
 export default Home;

@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import NotFound from '../pages/NotFound';
-import Logement from '../pages/Logement';
+import Logement from '../pages/logement';
 
 function Router() {
   return (
