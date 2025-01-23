@@ -19,9 +19,7 @@ body, html {
     width: 100%;
 }
 
-h1 {
-    color: v.$primary-color;  // Devrait être rouge/corail
-}
+
 
 .app-container {
     min-height: 100vh;
@@ -64,7 +62,7 @@ h1 {
     h1{
         color: white;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 24px ;
     }
 
     svg{
@@ -88,13 +86,14 @@ h1 {
 
 .collapse-content {
 
-    p{
+
         background-color: #F6F6F673;
         padding: 20px;
         border-bottom-right-radius:5px;
         border-bottom-left-radius: 5px;
+        color: black;
 
 
-    }
+  
 
 }

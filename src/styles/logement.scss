@@ -2,7 +2,7 @@
 
 .photo-container{
     width: 100%;
-    height: 415px;
+    height: 550px;
     position: relative;
 
 
@@ -99,6 +99,12 @@
     }
 }
 
+.tags-and-rating{
+
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .tag-display{
     display: flex;
@@ -127,3 +133,56 @@
 
 }
 
+
+.logement-rating{
+
+
+    gap: 10px;
+    display: flex;
+    height: 48px;
+
+    .star-filled{
+
+    svg{
+        fill: v.$primary-color;
+        stroke: v.$primary-color;
+        width: 30px;
+        height: 30px;
+    }
+
+    }
+
+    .star-empty{
+
+        svg{
+            fill: #E3E3E3;
+            stroke : #E3E3E3;
+            width: 30px;
+            height: 30px;
+        }
+
+    }
+}
+
+
+.logement-spec {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+
+.collapse-section {
+    display: flex;
+    flex-direction: column;
+
+    .collapse-content {
+        flex-grow: 1;  // Prendra toute la hauteur disponible
+        background-color: #F6F6F673;
+        padding: 20px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+}
