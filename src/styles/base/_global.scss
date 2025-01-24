@@ -1,4 +1,4 @@
-@use 'variables' as v;
+@use '../abstracts/variables' as v;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 * {
@@ -50,50 +50,3 @@ body, html {
     }
 }
 
-.collapse-header{
-
-    display: flex;
-    background-color: v.$primary-color;
-    border-radius: 5px;
-    padding: 20px;
-    justify-content: space-between;
-    
-
-    h1{
-        color: white;
-        font-weight: 700;
-        font-size: 24px ;
-    }
-
-    svg{
-        color: white;
-        height: 32px;
-        width: 32px;
-        stroke-width: 3;
-    }
-
-    .chevron {
-        transition: transform 0.5s ease;
-        transform: rotate(0deg);
-    }
-    
-    .chevron.rotate {
-        transform: rotate(180deg);
-    }
-
-  
-}
-
-.collapse-content {
-
-
-        background-color: #F6F6F673;
-        padding: 20px;
-        border-bottom-right-radius:5px;
-        border-bottom-left-radius: 5px;
-        color: black;
-
-
-  
-
-}

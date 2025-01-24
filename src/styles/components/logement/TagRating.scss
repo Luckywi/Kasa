@@ -1,4 +1,5 @@
-
+@use '../../abstracts/variables' as v;
+@use '../../abstracts/mixins' as m;
 
 .tags-and-rating{
 
@@ -22,9 +23,7 @@
         padding-left: 17.5px;
         padding-right: 17.5px;
         height: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center; 
+        @include m.flex-center; 
         border-radius: 30px;
         font-size: 14px;
         font-weight: 700;

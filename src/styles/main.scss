@@ -1,12 +1,13 @@
-@use '_variables.scss';
-@use '_global.scss';
-@use 'header.scss';
-@use 'footer.scss';
-@use 'logement.scss';
-@use 'variables' as v;
-
-
-
-
-
- 
+@use './abstracts/variables' as v;
+@use 'abstracts/mixins';
+@use 'abstracts/breakpoints';
+@use 'base/global';
+@use 'layout/header';
+@use 'layout/footer';
+@use 'components/Banner';
+@use 'components/Card'; 
+@use 'components/Collapse';
+@use 'components/NotFound';
+@use 'components/logement/Caroussel';
+@use 'components/logement/TagRating';
+@use 'components/logement/info';
