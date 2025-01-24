@@ -1,5 +1,5 @@
 
-function TagList({ tags }) {
+function Tag({ tags }) {
   return (
     <div className="tag-display">
       {tags.map((tag) => (
@@ -9,4 +9,4 @@ function TagList({ tags }) {
   );
 }
 
-export default TagList;
+export default Tag;

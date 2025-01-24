@@ -1,7 +1,7 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import logements from '../data/logements.json';
 import Collapse from '../components/Collapse';
-import TagList from '../components/Tag';
+import Tag from '../components/Tag';
 import Rating from '../components/Star';
 import HostInfo from '../components/HostInfo';
 import Info from '../components/Info';
@@ -11,6 +11,9 @@ function Logement() {
     const { id } = useParams(); // Récupère l'ID depuis l'URL
     const logement = logements.find(logement => logement.id === id);
 
+    if (!logement) {
+        return <Navigate to="/NotFound" replace />;
+    }
 
     return (
         <div className="logement">
@@ -26,7 +29,7 @@ function Logement() {
 
         <div className='tags-and-rating'>
 
-        <TagList tags={logement.tags} />
+        <Tag tags={logement.tags} />
         <Rating rating={logement.rating} />
 </div>
 

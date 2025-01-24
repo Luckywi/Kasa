@@ -1,0 +1,66 @@
+
+
+.tags-and-rating{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.tag-display{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+
+    .tag {
+
+        color: white;
+        padding: 5px;
+        background-color: v.$primary-color;
+        min-width: 100px;
+        padding-left: 17.5px;
+        padding-right: 17.5px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    
+
+
+}
+
+
+.logement-rating{
+
+
+    gap: 10px;
+    display: flex;
+    height: 48px;
+
+    .star-filled{
+
+    svg{
+        fill: v.$primary-color;
+        stroke: v.$primary-color;
+        width: 30px;
+        height: 30px;
+    }
+
+    }
+
+    .star-empty{
+
+        svg{
+            fill: #E3E3E3;
+            stroke : #E3E3E3;
+            width: 30px;
+            height: 30px;
+        }
+
+    }
+}

@@ -1,0 +1,49 @@
+
+
+.logement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    .info-logement {
+        .titre-logement {
+            color: v.$primary-color;  // Utilise ta variable de couleur primaire
+            font-size: 36px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .loc-logement {
+            color: v.$primary-color;
+            font-size: 18px;
+            font-weight: 500;
+            color: black;
+        }
+    }
+
+    .host-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;  // Espace entre le nom et la photo
+
+        .host-logement {
+            color: v.$primary-color;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: right;
+            line-height: 1.3;
+        
+ 
+        }
+
+        img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;  // Pour rendre l'image ronde
+            object-fit: cover;
+        }
+    }
+}

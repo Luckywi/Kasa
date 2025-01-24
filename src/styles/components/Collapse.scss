@@ -1,0 +1,67 @@
+.collapse-header{
+
+    display: flex;
+    background-color: v.$primary-color;
+    border-radius: 5px;
+    padding: 20px;
+    justify-content: space-between;
+    
+
+    h1{
+        color: white;
+        font-weight: 700;
+        font-size: 24px ;
+    }
+
+    svg{
+        color: white;
+        height: 32px;
+        width: 32px;
+        stroke-width: 3;
+    }
+
+    .chevron {
+        transition: transform 0.5s ease;
+        transform: rotate(0deg);
+    }
+    
+    .chevron.rotate {
+        transform: rotate(180deg);
+    }
+
+  
+}
+
+.collapse-content {
+
+
+        background-color: #F6F6F673;
+        padding: 20px;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius: 5px;
+        color: black;
+
+}
+
+
+.logement-spec {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+
+.collapse-section {
+    display: flex;
+    flex-direction: column;
+
+    .collapse-content {
+        flex-grow: 1;  // Prendra toute la hauteur disponible
+        background-color: #F6F6F673;
+        padding: 20px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+}
