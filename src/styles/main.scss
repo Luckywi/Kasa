@@ -3,63 +3,35 @@
 @use 'header.scss';
 @use 'footer.scss';
 @use 'logement.scss';
-
-.home-banner{
-
-    position: relative;
-    width: 100%;
-
-    img{
-        max-height: 223px;
-        width: 100%;
-        object-fit: cover;
-        display: block;
-        box-shadow: 25%;
-        filter: brightness(60%);
-        border-radius: 25px;
-    }
-
-    h1{
-        position: absolute;
-        top: 50%; // Centre verticalement
-        left: 50%; // Centre horizontalement
-        transform: translate(-50%, -50%); // Ajustement précis du centrage
-        color: white; // Texte blanc pour contraster avec l'image
-    }
-
-}
+@use 'variables' as v;
 
 
-
-.main-container{
+.main-container {
     background-color: #F6F6F6;
     border-radius: 25px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); // Crée 3 colonnes de taille égale
-    gap: 20px; // Espace entre les cartes
-    padding: 50px; // Espace autour des cartes
-    margin: 20px 0; // Marge en haut et en bas
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    padding: 50px;
+    margin: 20px auto;
+    max-width: 1400px;
+    place-items: center;
 
-
-
-    h1{
+    h1 {
         display: flex;
         font-size: x-small;
-
     }
-
-
 }
 
-
 .card {
-    height: 340px;
-    width: 340px;
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 1;
     border-radius: 10px;
     background-color: white;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
 
     .card-cover {
         width: 100%;
@@ -95,7 +67,8 @@
 .banner {
     position: relative;
      width: 100%;
-    
+    margin-bottom: 40px;
+
       img {
         max-height: 223px;
          width: 100%;
@@ -111,5 +84,44 @@
          transform: translate(-50%, -50%);
         color: white;
          margin: 0;
+         font-size: 48px;
+         width: max-content;
+         font-weight: 700;
        }
      }
+
+
+
+     .content{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+
+
+
+        .error-code{
+            font-weight: 700;
+            line-height: 410px;
+            font-size: 263px;
+            color: v.$primary-color;
+     }
+
+     .error-message{
+
+        font-size: 36px;
+        color: v.$primary-color;
+        font-weight: 500;
+
+     }
+
+     .home-link{
+
+        color: black;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 40px;
+     }
+}

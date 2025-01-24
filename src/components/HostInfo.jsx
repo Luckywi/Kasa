@@ -1,5 +1,3 @@
-import {} from '../styles/main.scss';
-
 
 function HostInfo({ host }) {
     const [firstName, lastName] = host.name.split(' ');

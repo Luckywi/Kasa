@@ -1,5 +1,3 @@
-import {} from '../styles/main.scss';
-
 
 function TagList({ tags }) {
   return (

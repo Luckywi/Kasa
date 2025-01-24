@@ -1,5 +1,3 @@
-import {} from '../styles/main.scss';
-
 function Banner({ image, text, brightness = 60 }) {
     return (
       <div className="banner">

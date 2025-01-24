@@ -1,4 +1,3 @@
-import {} from '../styles/main.scss';
 import logoFooter from '../assets/logoFooter.svg';
 import { Link } from 'react-router-dom';
 
