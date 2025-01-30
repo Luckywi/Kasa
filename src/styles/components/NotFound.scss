@@ -1,12 +1,13 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+@use '../abstracts/breakpoints' as b;
+@use 'sass:map';
 
 
 .content{
 
-    display: flex;
+    @include m.flex-center;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 80px;
 
 
@@ -15,22 +16,49 @@
         font-weight: 700;
         line-height: 410px;
         font-size: 263px;
-        color: v.$primary-color;
+        color: map.get(v.$colors, 'primary');
  }
 
  .error-message{
 
     font-size: 36px;
-    color: v.$primary-color;
+    color: map.get(v.$colors, 'primary');
     font-weight: 500;
+    display: flex;
+    text-align: center;
 
  }
 
  .home-link{
 
-    color: black;
+    color: map.get(v.$colors, 'black');
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 40px;
  }
+}
+
+
+@include b.mobile{
+
+
+   .content{
+      gap:80px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+
+      .error-code{
+         font-size: 99px;
+         line-height: 99px;
+      }
+      .error-message{
+         font-size: 18px;
+      }
+
+      .home-link{
+         font-size: 14px;
+      }
+   }
+
+
 }

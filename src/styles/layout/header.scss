@@ -1,4 +1,6 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/breakpoints' as b;
+@use 'sass:map';
 
 header {
     display: flex;
@@ -8,11 +10,15 @@ header {
     padding: 20px;
     padding-right: 5%;
     padding-left: 5%;
-    background-color: white;
-    margin-bottom: 25px;
+    background-color: map.get(v.$colors, 'white');
+    margin-bottom: 15px;
 
-    h1 {
-        color: v.$primary-color;
+    .logo-desktop {
+        display: block;
+    }
+
+    .logo-mobile {
+        display: none;
     }
 
     nav {
@@ -20,13 +26,40 @@ header {
             font-size: 24px;
             font-weight: 500;
             text-decoration: none;
-            color: black;
+            color: map.get(v.$colors, 'black'); 
             margin: 20px;
 
             &:hover {
                 text-decoration: underline;
-                color: black;
+                color: map.get(v.$colors, 'black'); 
             }
         }
     }
 }
+
+
+@include b.mobile {
+
+    header {
+
+        .logo-desktop {
+            display: none;
+        }
+    
+        .logo-mobile {
+            display: block;
+        }
+
+        nav {
+            a {
+                font-size: 12px;  
+                margin: 0px;
+                margin-left: 17px;     
+                text-transform: uppercase;  
+            }
+        }
+
+    }
+}
+
+

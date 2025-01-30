@@ -1,4 +1,11 @@
 $font-family: 'Montserrat';
 $font-weight: 500;
 $font-size: 14px;
-$primary-color: #FF6060;
+
+$colors: (
+  'primary': #FF6060,
+  'grey-light': #F6F6F6,
+  'grey-medium': #E3E3E3,
+  'white': #FFFFFF,
+  'black': #000000
+);

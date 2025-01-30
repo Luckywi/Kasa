@@ -1,4 +1,6 @@
 @use './abstracts/variables' as v;
+@use './abstracts/mixins' as m;
+@use 'sass:map';
 @use 'abstracts/mixins';
 @use 'abstracts/breakpoints';
 @use 'base/global';

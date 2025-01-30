@@ -1,15 +1,19 @@
 @use '../../abstracts/variables' as v;
+@use '../../abstracts/mixins' as m;
+@use '../../abstracts/breakpoints' as b;
+@use 'sass:map';
 
 .logement-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     .info-logement {
+        margin-bottom: 20px;
         .titre-logement {
-            color: v.$primary-color;  // Utilise ta variable de couleur primaire
+            color: map.get(v.$colors, 'primary'); 
             font-size: 36px;
             font-weight: 500;
             margin-bottom: 10px;
@@ -17,33 +21,32 @@
         }
 
         .loc-logement {
-            color: v.$primary-color;
+            color: map.get(v.$colors, 'primary');
             font-size: 18px;
             font-weight: 500;
-            color: black;
+            color: map.get(v.$colors, 'black');
+        }
+      }
+}
+
+
+@include b.mobile {
+
+.logement-header {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    .info-logement {
+        margin-bottom: 10px;
+        .titre-logement {
+            font-size: 18px;
+        }
+
+        .loc-logement {
+            font-size: 14px;
         }
     }
 
-    .host-info {
-        display: flex;
-        align-items: center;
-        gap: 10px;  // Espace entre le nom et la photo
-
-        .host-logement {
-            color: v.$primary-color;
-            font-size: 18px;
-            font-weight: 500;
-            text-align: right;
-            line-height: 1.3;
-        
- 
-        }
-
-        img {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;  // Pour rendre l'image ronde
-            object-fit: cover;
-        }
-    }
+}
 }

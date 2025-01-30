@@ -22,16 +22,21 @@ function Logement() {
 
         <div className='logement-header'>
 
+        <div className='title-and-location'>
+
         <Info title={logement.title} location={logement.location} />
 
-        <HostInfo host={logement.host} />
-        </div>
-
-        <div className='tags-and-rating'>
-
         <Tag tags={logement.tags} />
+
+        </div>
+        
+
+        <div className='host-and-rating'>
+
+        <HostInfo host={logement.host} />
         <Rating rating={logement.rating} />
-</div>
+        </div>
+        </div>
 
 
 <div className="logement-spec">

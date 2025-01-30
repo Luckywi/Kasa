@@ -1,17 +1,45 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+@use '../abstracts/breakpoints' as b;
+@use 'sass:map';
 
 footer {
-    text-align: center;
+    @include m.flex-center;
+    flex-direction: column;
     padding: 20px;
-    background-color: black;
-    color: white;
+    background-color: map.get(v.$colors, 'black');
+    color: map.get(v.$colors, 'white');
     margin-top: 40px;
 
     p {
         margin: 10px;
+        font-size: 24px;
+        font-weight: 500;
     }
 
     img{
         margin: 20px;
+    }
+}
+
+
+@include b.mobile{
+
+    footer{
+        
+        margin-top: 20px;
+
+        p{
+            font-size: 12px;
+            width: 133px;
+            height: 46px;
+            line-height: 17.11px;
+            text-align: center;
+            margin: 0px;
+        }
+
+        img{
+            margin: 10px;
+        }
     }
 }
