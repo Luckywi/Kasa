@@ -4,8 +4,8 @@
 @use 'abstracts/mixins';
 @use 'abstracts/breakpoints';
 @use 'base/global';
-@use 'layout/header';
-@use 'layout/footer';
+@use 'layout/Header';
+@use 'layout/Footer';
 @use 'components/Banner';
 @use 'components/Card'; 
 @use 'components/Collapse';
