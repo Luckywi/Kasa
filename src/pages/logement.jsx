@@ -2,7 +2,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import logements from '../data/logements.json';
 import Collapse from '../components/Collapse';
 import Tag from '../components/Tag';
-import Rating from '../components/Star';
+import Rating from '../components/Rating';
 import HostInfo from '../components/HostInfo';
 import Info from '../components/Info';
 import Carousel from '../components/Carousel';

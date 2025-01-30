@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
-import Router from './components/Router';
+import Router from './Router';
 
 function App() {
   return (
@@ -9,4 +9,4 @@ function App() {
   );
 }
 
-export default App;  // Assurez-vous que cette ligne est présente
+export default App; 

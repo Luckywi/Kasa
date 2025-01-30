@@ -1,4 +1,3 @@
-import {} from '../styles/main.scss';
 import about from '../assets/about.svg';
 import aboutData from '../data/about.json';
 import Banner from '../components/Banner';

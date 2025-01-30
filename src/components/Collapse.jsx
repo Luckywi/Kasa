@@ -1,7 +1,7 @@
 import {ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
-function Collapse({ title, content, icon: Icon = ChevronDown }) {
+function Collapse({ title, content, Icon = ChevronDown }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
