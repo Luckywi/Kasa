@@ -1,3 +1,4 @@
+import { } from '../styles/main.scss';
 import home from '../assets/home.svg';
 import logements from '../data/logements.json';
 import Banner from '../components/Banner';
