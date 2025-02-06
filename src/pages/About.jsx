@@ -7,9 +7,9 @@ import { ChevronUp } from 'lucide-react';
 function About() {
   return (
     <div className="about">
-      <Banner 
+      <Banner
         image={about}
-        brightness={70} 
+        brightness={70}
       />
       <div className='about_content'>
         {aboutData.aboutSections.map((section) => (
