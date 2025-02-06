@@ -12,7 +12,7 @@ function Logement() {
   const logement = logements.find(logement => logement.id === id);
 
   if (!logement) {
-    return <Navigate to="/NotFound" replace />;
+    return <Navigate to="/not-found" replace />;
   }
 
   return (
